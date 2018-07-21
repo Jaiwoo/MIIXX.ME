@@ -16,6 +16,15 @@
 
 <body>
 
+    <!-- full page loader containers -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+
     <header role="banner" class="banner">
         <h1 id="banner-text">MIIXX.ME </h1>
     </header>
@@ -29,10 +38,11 @@
 
     <div id="form-container" class="container">
         <form action="#" class="input-form">
-            <legend>Want some background music while you work or just need a break?
-                <br><br>
-                Select a time limit, genre & style and enjoy a popular mix from the worlds best DJs & curators.
+            <legend>
+                Select a time limit, genre & style and enjoy a popular mix from the world's best DJs & curators.
             </legend>
+
+            <div class="customHr">.</div>
     
             <div id="mad-lib-container" class="inner-form-container">
                 <div id="time-select-container" class="inner-form-container">
@@ -58,21 +68,37 @@
         </form>
     </div>
 
-    <div id="results-container" class="container">
-        <div class="frame-container"></div>
+    <div id="results-container" class="results-container">
+        <div id="frame-container" class="container results-container"></div>
     </div>
+    
 
-    <div id="results-ctl-container" class="container">
-        <button id="search-again-btn" class="button">Search Again</button>
+    <div id="results-ctl-container" class="container results-container">
+        <button id="prev-mix-btn" class="button">Prev Mix</button>
         <button id="next-mix-btn" class="button">Next Mix</button>
-        <button id="get-inspired-btn" class="button">Get Inspired!</button>
+        <button id="search-again-btn" class="button">Start Over</button>
+        <button id="get-inspired-btn" class="button">Need Inspiration?</button>
     </div>
 
-    <div id="inspiration-container" class="container">
-        <div class="quote-text"></div>
+    <div id="inspiration-container" class="container results-container">
+        <div id="quote-text"></div>
     </div>
 
 
+    <footer role="contentinfo">
+        <!-- unsplash photo attribution -->
+        <div id="attribution-container" class="footer-container">
+            <span>Photo by </span><a class="artist-link" href="" target="_blank"></a><span> on </span><a class="unsplash-link" href="https://unsplash.com/?utm_source=miixx.me&utm_medium=referral" target="_blank">Unsplash</a>
+            <button class="new-background-btn">Click</button>
+        </div>
+        
+        <!-- content info & email link -->
+        <!-- <div id="created-by-container" class="footer-container">
+            <span>Created By Jaiwoo</span>
+            <span>Email: <a href="mailto:info@jaiwoo.me">info@jaiwoo.me</a></span>
+        </div> -->
+    </footer>
+    
 
 <!-- ──────────────────────────────────────────────────────────────────────────────── -->
 
