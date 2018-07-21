@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>miixx.me</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<!-- ──────────────────────────────────────────────────────────────────────────────── -->
+
+
+<body>
+
+    <header role="banner" class="banner">
+        <h1 id="banner-text">MIIXX.ME </h1>
+    </header>
+
+    <div id="landing-container" class="container">
+        <p id="landing-text">A finely crafted mix takes you on a journey; it has the power to soothe the soul, inspire & keep you focused.
+        miixx.me finds a perfect mix from Mixcloud for your current task.
+        </p>
+        <button id="get-started-btn" class="button">Find a Mix</button>
+    </div>
+
+    <div id="form-container" class="container">
+        <form action="#" class="input-form">
+            <legend>Want some background music while you work or just need a break?
+                <br><br>
+                Select a time limit, genre & style and enjoy a popular mix from the worlds best DJs & curators.
+            </legend>
+    
+            <div id="mad-lib-container" class="inner-form-container">
+                <div id="time-select-container" class="inner-form-container">
+                    <span>I have </span>
+                    <select name="time-select" id="time-select"></select>
+                </div>
+                <div id="genre-select-container" class="inner-form-container">
+                    <span>and would like to listen to a </span>
+                    <select name="genre-select" id="genre-select"></select>
+                    <span>mix</span>
+                </div>
+                <div id="tag-select-container" class="inner-form-container">
+                    <span>in the styles of </span>
+                    <select name="style-select" id="style-select"></select>
+                    <select name="tag-select" id="tag-select"></select>
+                    <span>.</span>
+                </div>
+            </div>
+    
+            <div id="form-submit-container" class="inner-form-container">
+                <input type="submit" value="Submit" id="form-submit-btn">
+            </div>
+        </form>
+    </div>
+
+    <div id="results-container" class="container">
+        <div class="frame-container"></div>
+    </div>
+
+    <div id="results-ctl-container" class="container">
+        <button id="search-again-btn" class="button">Search Again</button>
+        <button id="next-mix-btn" class="button">Next Mix</button>
+        <button id="get-inspired-btn" class="button">Get Inspired!</button>
+    </div>
+
+    <div id="inspiration-container" class="container">
+        <div class="quote-text"></div>
+    </div>
+
+
+
+<!-- ──────────────────────────────────────────────────────────────────────────────── -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/form_options.js"></script>
+    <script src="js/main.js"></script>
+
+<!-- ──────────────────────────────────────────────────────────────────────────────── -->
+
+    
+</body>
+
+</html>
