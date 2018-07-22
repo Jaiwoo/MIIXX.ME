@@ -6,12 +6,14 @@
 * {
     box-sizing: border-box;
     font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14pt;
 }
 
 html {
     height: 100%;
-    background: url(/img/vinyl_static.jpg) no-repeat center center fixed;
+    /* background: url(/img/vinyl_static.jpg) no-repeat center center fixed; */
+    background: url(/img/static_background.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -54,6 +56,10 @@ button:hover {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 .banner {
     text-align: center;
@@ -71,12 +77,18 @@ button:hover {
 
     
 #banner-text {
+    font-family: 'Monofett', cursive;
     font-size: 30pt;
     padding: 10px;
 }
 
 #landing-text {
     font-size: 18pt;
+    padding: 10px;
+}
+
+#get-started-btn {
+    margin: 10px 0;
 }
 
 
@@ -96,9 +108,32 @@ legend {
 
 
 footer {
-    margin: 10px;
+    text-align: center;
+    width: 100%;
     position: fixed;
     bottom: 2px;
+}
+
+#attribution-container {
+    display: inline;
+}
+
+#created-by-container {
+    display: inline;
+}
+
+/* #created-by-container{
+    color: mintcream;
+    text-align: center;
+    margin: 0 auto;
+    width: 90vw;
+    width: 90%;
+} */
+
+#created-by-container span, a {
+    color: black;
+    font-family: 'Monofett', cursive;
+    font-size: 16pt;;
 }
 
 #results-ctl-container {
@@ -106,17 +141,15 @@ footer {
     background: none;
 }
 
-.footer-container {
-    font-size: 12pt;
-    color: white;
-    background-color: rgba(27, 29, 32, .9);
-    border-radius: 4px; 
-}
 
 #inspiration-container {
-    padding: 20px;
-    color: white;
+    padding: 0 20px;
+    color: mintcream;
     background: none;
+}
+
+#quote-text {
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 /*
@@ -147,6 +180,10 @@ footer {
     }
 
     button {
+        font-size: 20pt;
+    }
+
+    #created-by-container span, a {
         font-size: 20pt;
     }
 

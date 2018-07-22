@@ -29,7 +29,7 @@ const QUOTES_URL = 'https://quotes.p.mashape.com/'
 // other globals
 let currentMixIndex = 0;
 let mixResultsList = [];
-let imageQuery = 'vinyl';
+let imageQuery = 'audio';
 
 
 
@@ -155,7 +155,7 @@ function processImageResponse(response) {
 function processQuote(response) {
 
     const author = response.author;
-    const quoteText = `"${response.quote}"<br><br><span class="author-text">- ${author}</span>`;
+    const quoteText = `"${response.quote}"<br><span class="author-text">- ${author}</span>`;
   
     // insert quote data into DOM
     $('#quote-text').html(quoteText);
@@ -278,6 +278,7 @@ function handleResultsControls() {
         $('#form-container').fadeIn('slow');
     
         $('#quote-text').empty();
+        $('#frame-container').empty();
         $('#inspiration-container').hide();
     })
   }
@@ -394,7 +395,7 @@ function handleSubmit() {
     
         setTimeout(() => {
             $('.results-container').fadeIn('slow');
-        }, 3000);
+        }, 4000);
     })
   }
 
@@ -423,6 +424,6 @@ $(document).ready(function () {
         $('body').addClass('loaded');
     }, 2000);
 
-    getRandomImage(processImageResponse);
+    // getRandomImage(processImageResponse);
     getStarted();
   })
