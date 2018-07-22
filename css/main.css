@@ -12,7 +12,7 @@
 
 html {
     height: 100%;
-    background: url("/miixx.me/img/static_background.jpg") no-repeat center center fixed;
+    background: url("/img/static_background.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
