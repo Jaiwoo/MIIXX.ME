@@ -1,9 +1,9 @@
 // global values for user selection in form
 
 const timeOptions = [
-    {name: "1 hour", value: 3600},
-    {name: "2 hours", value: 7200},
-    {name: "3 hours", value: 10800},
+    {name: "up to 1 hour", value: 3600},
+    {name: "up to 2 hours", value: 7200},
+    {name: "up to 3 hours", value: 10800},
 ]
 
 const genreOptions = [

@@ -194,7 +194,7 @@ function processMixCloudData (response) {
     // HELPER FUNCTION //
     // filter the list of mixes based on user time limit 
     function filterByTime(item) {
-      if (userTimeLimit === "any time") {
+      if (userTimeLimit === "any length") {
         return true;
       }
       else if (item.audio_length < userTimeLimit && item.audio_length > (userTimeLimit*.5)) {
@@ -335,7 +335,7 @@ function renderTagOptions(selectedGenre) {
 function generateForm() {
 
     // insert time options from global array
-    timeSelector.html('<option value="any time" selected>no time limit</option>');
+    timeSelector.html('<option value="any length" selected>no time limit</option>');
     renderSelectorOptions(timeSelector, timeOptions);
 
     // insert genre options from global array
