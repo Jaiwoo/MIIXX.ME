@@ -194,7 +194,7 @@ function processMixCloudData (response) {
     // HELPER FUNCTION //
     // filter the list of mixes based on user time limit 
     function filterByTime(item) {
-      if (userTimeLimit === "no time limit") {
+      if (userTimeLimit === "any time") {
         return true;
       }
       else if (item.audio_length < userTimeLimit && item.audio_length > (userTimeLimit*.5)) {
@@ -236,8 +236,8 @@ function renderWidget(response) {
 
 function renderNoResults () {
 
-    const noResults = 'sorry, we couldn\'t find any mixes, try adjusting your search.';
-    resultsContainer.html(`<div class="no-results-text">${noResults}</div>`);
+    const noResults = 'sorry, we couldn\'t find any mixes based on your selection, try adjusting your search.';
+    mixWidget.html(`<div id="no-results-text">${noResults}</div>`);
 }
 
 //
@@ -335,7 +335,7 @@ function renderTagOptions(selectedGenre) {
 function generateForm() {
 
     // insert time options from global array
-    timeSelector.html('<option value="no time limit" selected>no time limit</option>');
+    timeSelector.html('<option value="any time" selected>no time limit</option>');
     renderSelectorOptions(timeSelector, timeOptions);
 
     // insert genre options from global array
