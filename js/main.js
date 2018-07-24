@@ -68,7 +68,8 @@ function getRandomQuote(callBack) {
         category: "motivational"
       },
       headers: {
-        "X-Mashape-Key": "jsTrl47D2cmsheyjD3vClTi3z6j7p1rKf0BjsnLCpnCGKXq1nO"
+        "X-Mashape-Key": "jsTrl47D2cmsheyjD3vClTi3z6j7p1rKf0BjsnLCpnCGKXq1nO",
+        "Accept": "application/json"
       },
       dataType: "json",
       type: 'GET',
@@ -287,7 +288,7 @@ function handleResultsControls() {
   $('#get-inspired-btn').on('click', function() {
  
     if ($('#inspiration-container').css('display') === 'none') {
-        $('#inspiration-container').show('slow', function() {
+        $('#inspiration-container').show('fast', function() {
             getRandomQuote(processQuote);
         });
         
@@ -410,11 +411,43 @@ function getStarted() {
         generateForm();
         landingPage.fadeOut(function() {
             madLib.fadeIn();
-      });
+        });
+
+        $('#banner-text').on('click', function() {
+
+          let reStart = confirm('Are you sure you want to go home?');
+          if (reStart == true) {
+            
+            $('body').removeClass('loaded');
+            getRandomImage(processImageResponse);
+  
+            currentMixIndex = 0;
+          
+            styleSelector.hide();
+            generateForm();
+        
+            $('.results-container').hide();
+            madLib.hide();
+            $('#prev-mix-btn').hide();
+            landingPage.fadeIn('slow');
+        
+            $('#quote-text').empty();
+            $('#frame-container').empty();
+            $('#inspiration-container').hide();
+
+            setTimeout(function(){
+              $('body').addClass('loaded');
+            }, 1000)
+          }
+        })
     })
 
-    $('.new-background-btn').on('click', function () {
-        getRandomImage(processImageResponse);
+    $('#new-img-button').on('click', function () {
+      $('body').removeClass('loaded');
+      getRandomImage(processImageResponse);
+      setTimeout(function(){
+        $('body').addClass('loaded');
+      }, 1000)
     })
   }
 
@@ -424,6 +457,6 @@ $(document).ready(function () {
         $('body').addClass('loaded');
     }, 2000);
 
-    // getRandomImage(processImageResponse);
+    getRandomImage(processImageResponse);
     getStarted();
   })

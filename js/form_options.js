@@ -44,6 +44,7 @@ const tagOptions = [
     ]},
 
     {genre: "old-school", tags: [
+        {name: "R&B", value: "rb"},
         {name: "funk", value: "funk"},
         {name: "disco", value: "disco"},
         {name: "soul", value: "soul"},
