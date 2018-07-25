@@ -251,6 +251,7 @@ function handleResultsControls() {
     currentMixIndex = 0;
 
     styleSelector.hide();
+    $("#form-submit-container").hide();
     generateForm();
 
     $(".results-container").hide();
@@ -293,7 +294,7 @@ function handleQuoteControls() {
 // ─── FORM RENDERING & SUBMIT FUNCTIONS────────────────────────────────────────────────────────
 //
 
-// update selector options on input form
+// update selector options
 function renderSelectorOptions(selector, options) {
   options.forEach(function(item) {
     selector.append(`<option value="${item.value}">${item.name}</option>`);
@@ -329,18 +330,18 @@ function generateForm() {
 
   // insert genre options from global array
   genreSelector.html(
-    '<option value="select genre" disabled selected>select genre</option>'
+    '<option value="select genre" aria-disabled="true" disabled selected>select genre</option>'
   );
   renderSelectorOptions(genreSelector, genreOptions);
 
   // insert style options from global array
   styleSelector.html(
-    '<option value="select style" disabled selected>select style</option>'
+    '<option value="select style" aria-disabled="true" disabled selected>select style</option>'
   );
   renderSelectorOptions(styleSelector, styleOptions);
 
   tagSelector.html(
-    '<option value="select tag" disabled selected>select tag</option>'
+    '<option value="select tag" aria-disabled="true" disabled selected>select tag</option>'
   );
   genreSelector.change(function() {
     renderTagOptions(genreSelector.val());
@@ -410,7 +411,7 @@ function getStarted() {
         getRandomImage(processImageResponse);
 
         currentMixIndex = 0;
-
+        $("#form-submit-container").hide();
         styleSelector.hide();
         generateForm();
 

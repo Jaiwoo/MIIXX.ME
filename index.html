@@ -44,28 +44,28 @@
         </div>
 
         <div id="form-container" class="container">
-            <form action="#" class="input-form">
+            <form role="form" action="#" class="input-form">
                 <legend>
                     Select a genre, style & length and enjoy a popular mix from the world's best DJs & curators.
                 </legend>
 
-                <div class="customHr">.</div>
+                <div aria-hidden="true" class="customHr">.</div>
 
                 <div id="mad-lib-container" class="inner-form-container">
                     <div id="genre-select-container" class="inner-form-container">
                         <span>I would like to listen to a </span>
-                        <select name="genre-select" id="genre-select" class="form-selector" required></select>
+                        <select aria-label="please select a genre" name="genre-select" id="genre-select" class="form-selector"></select>
                         <span>mix,</span>
                     </div>
                     <div id="tag-select-container" class="inner-form-container">
                         <span>in the styles of </span>
-                        <select name="style-select" id="style-select" class="form-selector"></select>
-                        <select name="tag-select" id="tag-select" class="form-selector" required></select>
+                        <select aria-label="please select a style" name="style-select" id="style-select" class="form-selector"></select>
+                        <select aria-label="please select a sub-genre" name="tag-select" id="tag-select" class="form-selector"></select>
                         <span>,</span>
                     </div>
                     <div id="time-select-container" class="inner-form-container">
-                        <span>that plays for </span>
-                        <select name="time-select" id="time-select" class="form-selector"></select>
+                        <span>& that plays for </span>
+                        <select aria-label="please select a time limit for the mix" name="time-select" id="time-select" class="form-selector"></select>
                         <span>.</span>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
         </div>
 
         <div id="results-container" class="results-container">
-            <div id="frame-container" class="container results-container"></div>
+            <div id="frame-container" class="container results-container" aria-live="polite"></div>
         </div>
 
 
@@ -90,7 +90,7 @@
         </div>
 
         <div id="inspiration-container" class="container results-container">
-            <div id="quote-text"></div>
+            <div id="quote-text" aria-live="polite"></div>
         </div>
 
     </main>
