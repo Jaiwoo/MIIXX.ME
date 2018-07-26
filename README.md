@@ -1,4 +1,4 @@
-# MIIXX.ME
+# [MIIXX.ME](https://miixx.me)
 
 > A finely crafted mix takes you on a journey; it has the power to soothe the soul, inspire & keep you focused. MIIXX.ME finds a perfect mix from Mixcloud for your current task.
 
