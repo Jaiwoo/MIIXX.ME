@@ -125,6 +125,7 @@ legend {
 #frame-container {
   height: 120px;
   margin: 10px auto;
+  opacity: .95;
 }
 
 footer {
@@ -259,7 +260,7 @@ a {
 }
 
 /*
- * ─── LOADER STYLES ──────────────────────────────────────────────────────────────
+ * ─── FULL PAGE LOADER STYLES ──────────────────────────────────────────────────────────────
  */
 
 #loader-wrapper {

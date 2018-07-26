@@ -361,7 +361,7 @@ function generateForm() {
   handleSubmit();
 }
 
-// on form submit, assign user input to variables and prep API call
+// handle form submit and prep API
 function handleSubmit() {
   $("form").on("submit", function(e) {
     e.preventDefault();
@@ -390,7 +390,7 @@ function handleSubmit() {
 
     setTimeout(() => {
       $(".results-container").fadeIn("slow");
-    }, 4000);
+    }, 3000);
   });
 }
 
